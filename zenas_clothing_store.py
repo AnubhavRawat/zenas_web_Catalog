@@ -1,3 +1,8 @@
-import streamlit
-import pandas
-streamlit.title('Zena\'s Amazing Athleisure Catalog')
+import streamlit as st
+
+try:
+  import snowflake.connector
+  st.success("Success!")
+  st.snow()
+except:
+  st.error("Oh no!")
