@@ -1,9 +1,7 @@
-import streamlit as st
-
-try:
-  import snowflake.connector
-  st.success("Success!")
-  st.snow()
-except:
-  st.error("Oh no!")
-
+import streamlit
+import snowflake.connector
+import pandas
+streamlit.title('Zena\'s Amazing Athleisure Catalog')
+# connect to snowflake
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_cur = my_cnx.cursor()
